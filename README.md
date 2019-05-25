@@ -13,25 +13,25 @@ Here is a test project I did to get familiar with JAX-RS, Java API for xml-RESTf
 8. Make tests with the following cURL commands:
 
 #### GET ALL -> 
-curl -X GET http://localhost:8080/TestingJAX/example/colors/
+`curl -X GET http://localhost:8080/TestingJAX/example/colors/`
 
 #### GET COLOR BY ID  ->
-curl -X GET http://localhost:8080/TestingJAX/example/colors/{id} 
+`curl -X GET http://localhost:8080/TestingJAX/example/colors/{id} `
 
 #### POST COLOR ->
-curl --data "name=white&hex=#FFFFFF" http://localhost:8080/TestingJAX/example/colors/add
+`curl --data "name=white&hex=#FFFFFF" http://localhost:8080/TestingJAX/example/colors/add`
 
 (you can change the color name value to anything and hex value to anything and it will work)
 
 #### PUT COLOR ->
-curl -X PUT -d "name=red" -d "hex=#E13125" http://localhost:8080/TestingJAX/example/colors/2
+`curl -X PUT -d "name=red" -d "hex=#E13125" http://localhost:8080/TestingJAX/example/colors/2`
 
 (again, feel free to change the name and hex value to whatever you like, and the id to anything. It checks if the id exists; if it does it displays "Something already exists with this id". If it doesn't, it adds the new values to that id).
 
 In addition, if put at 6 but there's nothing before it, it just takes the spot of an earlier spot, so far three colors, it takes up the fourth spot.
 
 #### DELETE COLOR ->
-curl -X DELETE http://localhost:8080/TestingJAX/example/colors/6
+`curl -X DELETE http://localhost:8080/TestingJAX/example/colors/6`
 
 Deletes the color based on id. Change the id to whatever. If it can't find it, it throws a 404 not found, with a message in console "Cannot find color".
 
