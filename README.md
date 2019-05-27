@@ -26,7 +26,7 @@ Here is a test project I did to get familiar with JAX-RS, Java API for xml-RESTf
 #### PUT COLOR ->
 `curl -X PUT -d "name=red" -d "hex=#E13125" http://localhost:8080/TestingJAX/example/colors/2`
 
-(again, feel free to change the name and hex value to whatever you like, and the id to anything. It checks if the id exists; if it does it displays "Something already exists with this id". If it doesn't, it adds the new values to that id).
+(again, feel free to change the name and hex value to whatever you like, and the id to anything. It checks if the id exists; if it does it updates that name and hex. If it doesn't, it says the that the id does not exist). //need to fix
 
 In addition, if put at 6 but there's nothing before it, it just takes the spot of an earlier spot, so far three colors, it takes up the fourth spot.
 
